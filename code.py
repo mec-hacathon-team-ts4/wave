@@ -11,8 +11,7 @@ neighbors = [(-1, -1), (-1, 0), (-1, 1),
              (1, -1),  (1, 0),  (1, 1)]
 
 # ========== 学習済みモデル読み込み ==========
-model = load('trained_model.joblib')  # 前回学習済みモデルを保存したファイル
-
+model = load("/Users/daichi/Documents/wave_caluculateion/wave/trained_model.joblib")
 # 前処理用の平均・標準偏差がある場合はここで読み込む
 # mean = np.load('mean.npy')
 # std = np.load('std.npy')
