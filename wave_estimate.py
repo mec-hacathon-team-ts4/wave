@@ -69,6 +69,10 @@ for target in targets:
     estimated_dir_data[target] = est_dir
     estimated_kt_data[target] = est_speed
 
+# ---- ステップ5：ノイズ除去（メディアンフィルタ適用） ----
+filtered_dir_data = median_filter(estimated_dir_data, size=3)
+filtered_kt_data = median_filter(estimated_kt_data, size=3)
+
 # 出力
 print("推定前の角度データ:")
 print(tide_dir_data)
@@ -78,3 +82,7 @@ print("推定後の角度データ:")
 print(estimated_dir_data)
 print("\n推定後の速度データ:")
 print(estimated_kt_data)
+print("推定後の角度データ (ノイズ除去後):")
+print(filtered_dir_data)
+print("\n推定後の速度データ (ノイズ除去後):")
+print(filtered_kt_data)
