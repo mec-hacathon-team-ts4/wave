@@ -3,7 +3,6 @@ from scipy.ndimage import median_filter
 import math
 
 # ---- サンプル用疑似データ作成 ----
-np.random.seed(0)  # 再現性のため
 tide_dir_data = np.array([
     [288.355, 241.173, 345.107, 327.057],
     [8.127, 293.332, 152.043, 137.204],
